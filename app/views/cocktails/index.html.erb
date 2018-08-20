@@ -1,9 +1,32 @@
-<h1>Cocktails</h1>
 
-<% @cocktails.each do |cocktail| %>
+<div class="banner" style="background-image:, url('https://unsplash.com/photos/DDDmsT44YFU');">
+  <div class="banner-content">
+    <h1>Cocktail Time</h1>
+  </div>
+</div>
 
-<h2> <%= link_to cocktail.name, cocktail_path(cocktail) %> </h2>
 
-<% end %>
+  <tbody>
+    <% @cocktails.each do |cocktail| %>
+      <tr>
+        <td><%= cocktail.name %></td>
+        <td><%= link_to 'Show', cocktail %></td>
+        <% end %>
+      </tr>
+      <tr><td><%= link_to 'Add Cocktail', new_cocktail_path %></td></tr>
+<br>
 
-<%= link_to 'Add Cocktail', new_cocktail_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <% @cocktails.each do |cocktail| %>
+       <td><%= cocktail.name %></td>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <!-- insert <div class="card"> -->
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <!-- insert <div class="card"> -->
+    </div>
+  </div>
+</div>
